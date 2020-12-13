@@ -1,0 +1,66 @@
+.SideNav {
+  width: 250px;
+  padding: 0px 10px;
+  color: white;
+  margin-right: 20px;
+}
+
+.LogoAmbev {
+  font-weight: 700;
+  font-size: 28px;
+  padding: 20px;
+  border-bottom: 1px solid #2e51bb;
+  display: flex;
+  align-items: center;
+}
+
+.LogoAmbev .LogoAmbev__svg {
+  width: 75px;
+}
+
+.BlocoNav .BlocoNav__nav {
+  padding: 0 0 0 20px;
+}
+
+.BlocoNav .BlocoNav__item {
+  transition: .2s;
+  grid-template-columns: 0.1fr 1fr;
+  position: relative;
+}
+
+.BlocoNav .BlocoNav__item:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.BlocoNav .BlocoNav__item:hover > .BlocoNav__detail {
+  display: block;
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.BlocoNav .BlocoNav__detail {
+  display: block;
+  width: 30px;
+  height: 48px;
+  background-color: #1c3faa;
+  position: absolute;
+  right: -30px;
+  transition: .2s;
+}
+
+.NavActive .BlocoNav__item {
+  background-color: #f1f5f8;
+  color:  #1c3faa;
+}
+
+.NavActive .BlocoNav__item:hover > .BlocoNav__detail {
+  background-color: #f1f5f8;
+}
+
+.NavActive .BlocoNav__item:hover {
+  background-color: #f1f5f8;
+  color:  #1c3faa;
+}
+
+.NavActive .BlocoNav__item .BlocoNav__detail {
+  background-color: #f1f5f8;
+}

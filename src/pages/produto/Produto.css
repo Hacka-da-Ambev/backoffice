@@ -1,0 +1,46 @@
+.BtnAddProduto {
+  background-color: #1d40aa;
+  padding-top: .5rem;
+  padding-bottom: .5rem;
+  padding-left: .75rem;
+  padding-right: .75rem;
+  font-weight: 500;
+  border-radius: .375rem;
+}
+
+.DivSearch input {
+  color: #57606e;
+  padding: 5px 37px 5px 15px;
+  border-radius: .375rem;
+}
+
+.DivSearch input:focus {
+  outline: 1px solid #57606e;
+}
+
+.iconSearch {
+  color: #57606e;
+  right: 11px;
+  top: 9px;
+}
+
+.divProdutoImg {
+  width: 45px;
+  height: 45px;
+}
+
+.table {
+  border-spacing: 0 10px;
+}
+
+.table td, .table th {
+  padding-top: .75rem;
+  padding-bottom: .75rem;
+  padding-left: 1.25rem;
+  padding-right: 1.25rem;
+  color: rgba(107, 114, 128, 1);
+}
+
+.tdDescription {
+  max-width: 170px;
+}
