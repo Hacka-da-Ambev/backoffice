@@ -15,7 +15,7 @@ function CadastrarProduto() {
             <label htmlFor="name" className="text-gray-500 mb-2">Nome</label>
             <input type="text" id="name" className="px-3 py-2 border border-gray-200 rounded-md" placeholder="Nome..."/>
           </div>
-          <div class="grid grid-cols-2 gap-5 mt-5">
+          <div className="grid grid-cols-2 gap-5 mt-5">
             <div className="flex flex-col">
               <label htmlFor="ibu" className="text-gray-500 mb-2">IBU</label>
               <input type="number" id="ibu" className="px-3 py-2 border border-gray-200 rounded-md" placeholder="IBU..."/>

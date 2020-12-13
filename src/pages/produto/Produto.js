@@ -1,71 +1,24 @@
+import React, { useState, useEffect } from 'react';
 import './Produto.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faSearch, faEdit, faTrash } from '@fortawesome/free-solid-svg-icons';
 import skolPng from './skol.png';
 import { Link } from 'react-router-dom';
+import { getAllBeers } from '../../Api';
 
 function Produto() {
-  const produtos = [
-    {
-      id: 1,
-      image: skolPng,
-      name: 'Skol',
-      description: `Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
-        Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, 
-        when an unknown printer took a galley of type and scrambled it to make a type specimen book. 
-        It has survived not only five centuries, but also the leap into electronic typesetting, 
-        remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, 
-        and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.`,
-      ibu: 50,
-      abv: 40
-    },
-    {
-      id: 2,
-      image: skolPng,
-      name: 'Skol Beats',
-      description: `Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
-        Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, 
-        when an unknown printer took a galley of type and scrambled it to make a type specimen book. 
-        It has survived not only five centuries, but also the leap into electronic typesetting, 
-        remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, 
-        and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.`,
-      ibu: 50,
-      abv: 40
-    },
-    {
-      id: 3,
-      image: skolPng,
-      name: 'Skol Beats 2',
-      description: `Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
-        Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, 
-        when an unknown printer took a galley of type and scrambled it to make a type specimen book. 
-        It has survived not only five centuries, but also the leap into electronic typesetting, 
-        remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, 
-        and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.`,
-      ibu: 50,
-      abv: 40
-    },
-    {
-      id: 4,
-      image: skolPng,
-      name: 'Skol b',
-      description: `Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
-        Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, 
-        when an unknown printer took a galley of type and scrambled it to make a type specimen book. 
-        It has survived not only five centuries, but also the leap into electronic typesetting, 
-        remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, 
-        and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.`,
-      ibu: 50,
-      abv: 40
-    }
-  ];
+  const [beers, setBeers] = useState([]);
 
-  const listProdutos = produtos.map(value => {
+  useEffect(() => {
+    getAllBeers().then(res => setBeers(res));
+  });
+
+  const listProdutos = beers.map(value => {
     return (
       <tr className="bg-white" key={value.name}>
         <td className="p-4">
           <div className="divProdutoImg">
-            <img src={value.image} alt="Produto" className="w-full h-full"/>
+            <img src={'http://localhost/' + value.image} alt="Produto" className="w-full h-full"/>
           </div>
         </td>
         <td className="font-black">{value.name}</td>
