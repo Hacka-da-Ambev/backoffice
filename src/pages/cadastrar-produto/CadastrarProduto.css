@@ -1,0 +1,18 @@
+.btnSalvarProduto {
+  background-color: #1d40aa;
+  padding-top: .5rem;
+  padding-bottom: .5rem;
+  padding-left: .75rem;
+  padding-right: .75rem;
+  font-weight: 500;
+  border-radius: .375rem;
+}
+
+.btnCancelarProduto {
+  padding-top: .5rem;
+  padding-bottom: .5rem;
+  padding-left: .75rem;
+  padding-right: .75rem;
+  font-weight: 500;
+  border-radius: .375rem;
+}
