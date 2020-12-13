@@ -21,7 +21,8 @@ function App() {
         {value.component()}
       </Route>
     );
-  })
+  });
+  
   return (
     <div className="App">
       <Router>

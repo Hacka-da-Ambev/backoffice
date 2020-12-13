@@ -2,20 +2,23 @@ import React, { useState, useEffect } from 'react';
 import './Produto.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faSearch, faEdit, faTrash } from '@fortawesome/free-solid-svg-icons';
-import skolPng from './skol.png';
 import { Link } from 'react-router-dom';
 import { getAllBeers } from '../../Api';
 
+
 function Produto() {
   const [beers, setBeers] = useState([]);
-
+  
   useEffect(() => {
-    getAllBeers().then(res => setBeers(res));
-  });
+    getAllBeers()
+      .then(res => {
+        setBeers(res.data);
+      });
+  }, []);
 
   const listProdutos = beers.map(value => {
     return (
-      <tr className="bg-white" key={value.name}>
+      <tr className="bg-white" key={value.id}>
         <td className="p-4">
           <div className="divProdutoImg">
             <img src={'http://localhost/' + value.image} alt="Produto" className="w-full h-full"/>

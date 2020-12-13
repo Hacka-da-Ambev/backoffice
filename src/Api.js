@@ -1,12 +1,12 @@
 import axios from 'axios';
 
 function getAllBeers() {
-  return axios.get('http://localhost/api/beer')
-    .then(res => res.data);
+  return axios.get('http://localhost/api/beer');
 }
 
 function createBeer(data) {
-  axios.post('http://localhost/api/beer', data);
+  return axios.post('http://localhost/api/beer', data)
+    .then(res => res);
 }
 
-export { getAllBeers };
+export { getAllBeers, createBeer };
